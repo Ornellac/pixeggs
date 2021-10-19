@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Monster } from './../models/monster';
+import { Monstre } from '../models/monstre';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,8 +12,8 @@ export class ApiService {
 
   constructor(private _http: HttpClient) { }
 
-  public getMonster(): Observable<any>{
-    return this._http.get<any>(`${this._url}/monster`);
+  public getMonstre(): Observable<any>{
+    return this._http.get<any>(`${this._url}/monstre`);
   }
 
 

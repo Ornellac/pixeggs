@@ -1,4 +1,4 @@
-import { Monster } from './../models/monster';
+import { Monstre } from '../models/monstre';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 
@@ -9,12 +9,12 @@ import { ApiService } from '../services/api.service';
 })
 export class AccueilComponent implements OnInit {
 
-  public monster:Monster[] = [];
+  public monster:Monstre[] = [];
 
   constructor(private _api:ApiService) { }
 
   ngOnInit() {
-    this._api.getMonster().subscribe(
+    this._api.getMonstre().subscribe(
       (data) => this.monster = data,
       (err) => console.error(err),
       () => console.log("Fin de l'observation")
