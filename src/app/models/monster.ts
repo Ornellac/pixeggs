@@ -1,5 +1,5 @@
 export interface Monstre{
-    PK_Monster:number;
+    PK_Monstre:number;
     NomMonstre:string;
-    ApparenceMonstre:string;
+    Exp:number;
 }
