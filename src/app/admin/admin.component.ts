@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  deconnecter(){
+    this.authService.deconnecter();
+    this.router.navigateByUrl('/connexion');
   }
 
 }

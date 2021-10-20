@@ -10,7 +10,7 @@ import { Utilisateur } from '../models/utilisateur';
   styleUrls: ['./connexion.component.scss']
 })
 export class ConnexionComponent implements OnInit {
-  loginForm:FormGroup;
+  loginForm!: FormGroup;
   isSubmitted = false;
   constructor(private authService:AuthService, private router:Router, private formBuilder:FormBuilder ) { }
 
