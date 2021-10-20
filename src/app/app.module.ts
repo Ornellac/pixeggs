@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [				
@@ -14,6 +16,8 @@ import { FooterComponent } from './footer/footer.component';
     AccueilComponent,
     NavComponent,
     FooterComponent,
+    ConnexionComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
