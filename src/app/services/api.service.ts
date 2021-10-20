@@ -12,9 +12,14 @@ export class ApiService {
 
   constructor(private _http: HttpClient) { }
 
+  //* Les Monstres :
   public getMonstre(): Observable<any>{
     return this._http.get<any>(`${this._url}/monstre`);
   }
 
+  //* Les stats :
+  public getStat() : Observable<any>{
+    return this._http.get<any>(`${this._url}/stat`);
+  }
 
 }
