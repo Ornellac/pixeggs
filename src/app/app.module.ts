@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { AdminComponent } from './admin/admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InscriptionComponent } from './inscription/inscription.component';
 
 @NgModule({
   declarations: [				
@@ -19,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     ConnexionComponent,
     AdminComponent,
+    InscriptionComponent,
   ],
   imports: [
     BrowserModule,
