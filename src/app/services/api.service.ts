@@ -15,18 +15,9 @@ export class ApiService {
 
   constructor(private _http: HttpClient) { }
 
-  // //! TEST:
-  // getTypeRequest() {
-  //   return this._http.get(`${this._url}/utilisateur`).pipe(map(res => {
-  //   return res;
-  //   }));
-  // }
-  // postTypeRequest() {
-  //   return this._http.post(`${this._url}/utilisateur`).pipe(map(res => {
-  //   return res;
-  //   }));
-  // }
-  // //! FIN TEST;
+  public checkLogin(body:any):Observable<Utilisateur[]>{
+    return this._http.post<Utilisateur[]>(`${this._url}/utilisateur/check`, body)
+  }
 
   //* Les Monstres :
   public getMonstre(): Observable<any>{
