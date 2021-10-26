@@ -19,6 +19,10 @@ export class ApiService {
     return this._http.post<Utilisateur[]>(`${this._url}/utilisateur/check`, body)
   }
 
+  public register(body:any):Observable<Utilisateur[]>{
+    return this._http.post<Utilisateur[]>(`${this._url}/utilisateur/register`, body)
+  }
+
   //* Les Monstres :
   public getMonstre(): Observable<any>{
     return this._http.get<any>(`${this._url}/monstre`);

@@ -1,0 +1,53 @@
+<p>Vous pouvez vous enregistrer ci-dessous en remplissant le formulaire.</p>
+
+<div class="login">
+  <h2 class="login-header">S'enregistrer</h2>
+  <form [formGroup]="registerForm" class="login-container" (ngSubmit)="senregistrer()">
+    <p [ngClass]="{ 'has-error': isSubmit && formControls.Nom.errors }">
+      <input type="text" placeholder="Nom" formControlName="Nom">
+    </p>
+    <div *ngIf="isSubmit && formControls.Nom.errors" class="help-block">
+      <div *ngIf="formControls.Nom.errors.required" font color="red">Un nom est requis.</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmit && formControls.Prenom.errors }">
+      <input type="text" placeholder="Prenom" formControlName="Prenom">
+    </p>
+    <div *ngIf="isSubmit && formControls.Prenom.errors" class="help-block">
+      <div *ngIf="formControls.Prenom.errors.required" font color="red">Un prénom est requis.</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmit && formControls.DateNaiss.errors }">
+      <input type="date" placeholder="DateNaiss" formControlName="DateNaiss">
+    </p>
+    <div *ngIf="isSubmit && formControls.DateNaiss.errors" class="help-block">
+      <div *ngIf="formControls.DateNaiss.errors.required" font color="red">Une date est requise.</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmit && formControls.Pseudo.errors }">
+      <input type="text" placeholder="Pseudo" formControlName="Pseudo">
+    </p>
+    <div *ngIf="isSubmit && formControls.Pseudo.errors" class="help-block">
+      <div *ngIf="formControls.Pseudo.errors.required" font color="red">Un pseudo est requis.</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmit && formControls.Email.errors }">
+      <input type="email" placeholder="Email" formControlName="Email">
+    </p>
+    <div *ngIf="isSubmit && formControls.Email.errors" class="help-block">
+      <div *ngIf="formControls.Email.errors.required" font color="red">L'email est requis.</div>
+    </div>
+
+    <p [ngClass]="{ 'has-error': isSubmit && formControls.Password.errors }">
+      <input type="password" placeholder="Password" formControlName="Password">
+    </p>
+    <div *ngIf="isSubmit && formControls.Password.errors" class="help-block">
+      <div *ngIf="formControls.Password.errors.required" font color='red'> Mot de passe requis.</div>
+    </div>
+
+    <p>
+      <input type="submit" value="Register">
+      <button type="reset" class="annulerButton" (click)="resetForm()">Annuler</button>
+    </p>
+  </form>
+</div>

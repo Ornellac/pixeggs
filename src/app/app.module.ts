@@ -11,9 +11,11 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { AdminComponent } from './admin/admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InscriptionComponent } from './inscription/inscription.component';
+import { RegisterComponent } from './register/register.component';
+import { ChoixComponent } from './choix/choix.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [						
     AppComponent,
     AccueilComponent,
     NavComponent,
@@ -21,6 +23,8 @@ import { InscriptionComponent } from './inscription/inscription.component';
     ConnexionComponent,
     AdminComponent,
     InscriptionComponent,
+    RegisterComponent,
+    ChoixComponent
   ],
   imports: [
     BrowserModule,

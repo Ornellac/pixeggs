@@ -11,8 +11,10 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./connexion.component.scss']
 })
 export class ConnexionComponent implements OnInit {
+  
   loginForm!: FormGroup;
   isSubmitted = false;
+
   constructor(private _api:ApiService, private authService:AuthService, private router:Router, private formBuilder:FormBuilder ) { }
 
   ngOnInit() {
@@ -21,7 +23,9 @@ export class ConnexionComponent implements OnInit {
       Password:['', Validators.required]
     });
   }
+
   get formControls() { return this.loginForm.controls; }
+
   seConnecter(){
     console.log(this.loginForm.value);
     this.isSubmitted = true;

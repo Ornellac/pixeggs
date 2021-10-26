@@ -1,3 +1,5 @@
+import { ChoixComponent } from './choix/choix.component';
+import { RegisterComponent } from './register/register.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
@@ -10,7 +12,9 @@ const routes: Routes = [
   {path:'', redirectTo:'accueil', pathMatch:'full'},
   {path:'accueil', component:AccueilComponent},
   {path:'connexion', component:ConnexionComponent},
-  {path:'admin', component:AdminComponent}
+  {path:'admin', component:AdminComponent},
+  {path:'register', component:RegisterComponent},
+  {path:'choix', component:ChoixComponent}
 ];
 
 @NgModule({
