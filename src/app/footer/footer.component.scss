@@ -1,0 +1,23 @@
+*{
+    background-color: rgb(237, 211, 255);
+}
+
+footer{
+    margin-top: 2%;
+
+}
+
+.footerContenant {
+    position: relative;
+    text-align: center;
+    font-family: 'Grandstander', cursive;
+    color: rgb(0, 0, 0);
+    font-size: clamp(0.5rem, 4vw, 1.6rem);      /*? Text responsif */
+}
+
+.textfooter {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 2%;
+}
+

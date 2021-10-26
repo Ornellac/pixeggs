@@ -1,11 +1,15 @@
 <nav>
+  <img src="../../assets/NavLogo.png" onmouseover="javascript:this.src='../../assets/NavLogo_onMouse.png';" onmouseout="javascript:this.src='../../assets/NavLogo.png';" />
   <ul>
-    Nav work
-    <!-- <img src="" onmouseover="javascript:this.src='./../../assets/Logo_nav_hover.png';" onmouseout="javascript:this.src='/../../assets/Logo_nav.png';" /> -->
-    <!-- Faire un logo trop stylez aves des oeufs et le Pixeggs -->
     <li>
-      <a routerLink='/accueil'>ACCUEIL</a>
-      <a routerLink='/connexion'>CONNEXION</a>
+      <div class="hot-container">
+        <p>
+          <a routerLink='/accueil' class="btn btn-blue">Accueil</a>
+          <a routerLink='/connexion' class="btn btn-blue">Connection</a>
+        </p>
+      </div>
     </li>
   </ul>
 </nav>
+
+<!-- Pour les espace "&nbsp;" -->
