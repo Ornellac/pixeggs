@@ -38,7 +38,8 @@ export class RegisterComponent implements OnInit {
     }
     let user = [];
     this._api.register(this.registerForm.value).subscribe(data => {user=data;
-      alert('Succes !😀')
+      alert('SUCCES !😀')
+      // alert('SUCCES !'+ JSON.stringify(this.registerForm.value, null, 4))
       this.router.navigateByUrl('/choix');
     });
   }

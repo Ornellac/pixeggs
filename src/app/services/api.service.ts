@@ -28,6 +28,10 @@ export class ApiService {
     return this._http.get<any>(`${this._url}/monstre`);
   }
 
+  public getChoixMonstre(body:any):Observable<Monstre[]>{
+    return this._http.post<Monstre[]>(`${this._url}/monstre/choix`, body)
+  }
+
   //* Les stats :
   public getStat() : Observable<any>{
     return this._http.get<any>(`${this._url}/stat`);
