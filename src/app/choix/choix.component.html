@@ -1,5 +1,25 @@
-<p>
-  Félicitation ! Votre compte a été créez avec succes.
-</p>
+<p>Vous pouvez créez votre monstre.</p>
 
+<div>
+  <h2 class="login-header">Choix du monstre</h2>
+  <form [formGroup]="monstreForm" class="login-container" (ngSubmit)="choixMonstre()">
+    <p [ngClass]="{ 'has-error': valide && formControls.NomMonstre.errors }">
+      <input type="text" placeholder="Surnom de votre monstre" formControlName="NomMonstre">
+    </p>
+    <div *ngIf="valide && formControls.NomMonstre.errors" class="help-block">
+      <div *ngIf="formControls.NomMonstre.errors.required" font color="red">Un surnom est requis.</div>
+    </div>
 
+    <p [ngClass]="{ 'has-error': valide && formControls.FK_Stat.errors }">
+      <input class="radio" type="radio" formControlName="FK_Stat" value="1" checked>
+      <label for="FK_Stat"><img src="../../assets/Oeuf2.gif"></label>
+    </p>
+    <!-- <div *ngIf="valide && formControls.FK_Stat.errors" class="help-block">
+      <div *ngIf="formControls.FK_Stat.errors.required" font color="red">Un prénom est requis.</div>
+    </div> -->
+
+    <p>
+      <input class="btn btn-blue" type="submit" value="Créez mon monstre">
+    </p>
+  </form>
+</div>

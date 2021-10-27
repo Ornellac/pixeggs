@@ -38,9 +38,9 @@ export class RegisterComponent implements OnInit {
     }
     let user = [];
     this._api.register(this.registerForm.value).subscribe(data => {user=data;
-      alert('SUCCES !😀')
+      alert('SUCCES !😀 Tu peux désormais te connecter.')
       // alert('SUCCES !'+ JSON.stringify(this.registerForm.value, null, 4))
-      this.router.navigateByUrl('/choix');
+      this.router.navigateByUrl('/connexion');
     });
   }
 
