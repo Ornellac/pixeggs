@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Utilisateur } from './models/utilisateur';
 
@@ -7,6 +8,7 @@ import { Utilisateur } from './models/utilisateur';
 export class AuthService {
 
   constructor() { }
+
   public seConnecter(userInfo:Utilisateur){
     localStorage.setItem('ACCESS_TOKEN', JSON.stringify(userInfo));
   }

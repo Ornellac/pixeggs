@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Monstre } from '../models/monstre';
@@ -16,11 +17,20 @@ export class ApiService {
   constructor(private _http: HttpClient) { }
 
   public checkLogin(body:any):Observable<Utilisateur[]>{
-    return this._http.post<Utilisateur[]>(`${this._url}/utilisateur/check`, body)
+    return this._http.post<Utilisateur[]>(`${this._url}/utilisateur/check`, body);
   }
 
   public register(body:any):Observable<Utilisateur[]>{
-    return this._http.post<Utilisateur[]>(`${this._url}/utilisateur/register`, body)
+    return this._http.post<Utilisateur[]>(`${this._url}/utilisateur/register`, body);
+  }
+
+  /* Test */
+  public checkCo(id:number):Observable<Utilisateur>{
+    return this._http.get<Utilisateur>(`${this._url}/utilisateur/${id}`);
+  }
+
+  public checkUser():Observable<Utilisateur>{
+    return this._http.get<Utilisateur>(`${this._url}/utilisateur`);
   }
 
   //* Les Monstres :
@@ -29,7 +39,7 @@ export class ApiService {
   }
 
   public getChoixMonstre(body:any):Observable<Monstre[]>{
-    return this._http.post<Monstre[]>(`${this._url}/monstre/choix`, body)
+    return this._http.post<Monstre[]>(`${this._url}/monstre/choix`, body);
   }
 
   //* Les stats :
