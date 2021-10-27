@@ -1,6 +1,30 @@
-button{
-    background: rgb(61, 110, 148);
-    border-color: transparent;
-    color: #fff;
-    cursor: pointer;
+*{
+    font-family: 'Grandstander', cursive;
+	text-align: center;
 }
+
+.btn.btn-blue {
+	background-color: rgb(226, 191, 255);
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+    margin-top:5%;
+    padding: 11px;
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    border-radius: 7px;
+    cursor: pointer;
+    // border-color: transparent;
+}
+
+	.btn.btn-blue:hover {
+		background-color: rgb(142, 140, 176);
+		border-color: rgba(0,0,0,0.5);
+	}
+	
+	.btn.btn-blue:active {
+		background-color: #3C677B;
+		border-color: rgba(0,0,0,0.9);
+	}
