@@ -10,13 +10,27 @@
       <div *ngIf="formControls.NomMonstre.errors.required" font color="red">Un surnom est requis.</div>
     </div>
 
-    <p [ngClass]="{ 'has-error': valide && formControls.FK_Stat.errors }">
-      <input class="radio" type="radio" formControlName="FK_Stat" value="1" checked>
+    <div class="radio" [ngClass]="{ 'has-error': valide && formControls.FK_Stat.errors }">
+      <input id="FK_Stat" type="radio" formControlName="FK_Stat" value="1" checked>
       <label for="FK_Stat"><img src="../../assets/Oeuf2.gif"></label>
-    </p>
-    <!-- <div *ngIf="valide && formControls.FK_Stat.errors" class="help-block">
-      <div *ngIf="formControls.FK_Stat.errors.required" font color="red">Un prénom est requis.</div>
-    </div> -->
+    </div>
+
+    <div *ngIf="valide && formControls.FK_Stat.errors" class="help-block">
+      <div *ngIf="formControls.FK_Stat.errors.required" font color="red">Un choix d'oeuf doit être fait.</div>
+    </div>
+    
+    <div class="radio" [ngClass]="{ 'has-error': valide && formControls.FK_Stat.errors }">
+      <input id="FK_Stat" type="radio" formControlName="FK_Stat" value="2">
+      <label for="FK_Stat"><img src="../../assets/Oeuf1.gif"></label>
+    </div>
+
+    <div *ngIf="valide && formControls.FK_Stat.errors" class="help-block">
+      <div *ngIf="formControls.FK_Stat.errors.required" font color="red">Un choix d'oeuf doit être fait.</div>
+    </div>
+
+    <!-- <p [ngClass]="{ 'has-error': valide && formControls.FK_Utilisateur.errors }">
+      <input type="text" formControlName="FK_Utilisateur">
+    </p> -->
 
     <p>
       <input class="btn btn-blue" type="submit" value="Créez mon monstre">

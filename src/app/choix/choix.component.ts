@@ -28,8 +28,8 @@ export class ChoixComponent implements OnInit {
     this.monstreForm = this.formBuilder.group({
       NomMonstre:['', Validators.required],
       Exp:[''],
-      FK_Stat:[''],
-      FK_Utilisateur:['']
+      FK_Stat:['', Validators.required],
+      FK_Utilisateur:[this.user?this.user['PK_Utilisateur']:'']
     });
   }
 
