@@ -7,7 +7,13 @@
 
 <div>
     Info de mon monstre actuel:
-
+    <ng-container *ngIf="Monstre">
+        <ng-container *ngFor="let user of Monstre">
+            <p>
+                {{user?.NomMonstre}}
+            </p>
+        </ng-container>
+    </ng-container>
 </div>
 
 <p>

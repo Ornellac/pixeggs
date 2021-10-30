@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthGuard } from '../auth.guard';
 
 @Component({
   selector: 'app-nav',
@@ -11,5 +12,6 @@ export class NavComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

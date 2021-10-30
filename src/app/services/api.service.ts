@@ -25,13 +25,13 @@ export class ApiService {
   }
 
   /* Test */
-  public checkCo(id:number):Observable<Utilisateur>{
-    return this._http.get<Utilisateur>(`${this._url}/utilisateur/${id}`);
-  }
+  // public checkCo(id:number):Observable<Utilisateur>{
+  //   return this._http.get<Utilisateur>(`${this._url}/utilisateur/${id}`);
+  // }
 
-  public checkUser():Observable<Utilisateur>{
-    return this._http.get<Utilisateur>(`${this._url}/utilisateur`);
-  }
+  // public checkUser():Observable<Utilisateur>{
+  //   return this._http.get<Utilisateur>(`${this._url}/utilisateur`);
+  // }
 
   //* Les Monstres :
   public getMonstre(): Observable<any>{
@@ -41,6 +41,10 @@ export class ApiService {
   public getChoixMonstre(body:any):Observable<Monstre[]>{
     return this._http.post<Monstre[]>(`${this._url}/monstre/choix`, body);
   }
+
+  public getUserMonstre(id:number): Observable<Monstre[]>{
+    return this._http.get<Monstre[]>(`${this._url}/monstre/${id}`);
+  } 
 
   //* Les stats :
   public getStat() : Observable<any>{

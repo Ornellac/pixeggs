@@ -26,15 +26,9 @@ export class AdminComponent implements OnInit {
     this.userTest = localStorage.getItem('ACCESS_TOKEN');
     console.log(this.userTest)
     this.user = JSON.parse(this.userTest)
-    // this._api.getMonstre().subscribe(
-    //   (data) => this.Monstre = data );
+    
   }
   
-  //!________________________________________________. Info du monstre :
-  // public monstre:string = '';
-  // AffichezMonstre(){
-  //   this._api.getMonstre
-  // }
 
   deconnecter(){
     this.authService.deconnecter();

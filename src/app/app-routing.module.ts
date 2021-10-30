@@ -12,9 +12,9 @@ const routes: Routes = [
   {path:'', redirectTo:'accueil', pathMatch:'full'},
   {path:'accueil', component:AccueilComponent},
   {path:'connexion', component:ConnexionComponent},
-  {path:'admin', component:AdminComponent},
+  {path:'admin', canActivate:[AuthGuard], component:AdminComponent},
   {path:'register', component:RegisterComponent},
-  {path:'choix', component:ChoixComponent}
+  {path:'choix',canActivate:[AuthGuard], component:ChoixComponent}
 ];
 
 @NgModule({
