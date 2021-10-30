@@ -43,9 +43,19 @@ export class ChoixComponent implements OnInit {
     }
     let monstre = [];
     this._api.getChoixMonstre(this.monstreForm.value).subscribe(data => {monstre=data;
-      alert('Monstre choisis avec succes !')
-      // this.router.navigateByUrl('/accueil');
-      //* FAIRE CETTE PARTIE POUR ANIMATION DU MONSTRE CHOISI 
+      alert('Monstre créer avec succes !')
+      this.router.navigateByUrl('/admin'); 
+      /* AJOUTEZ une nouvelle route pour réalisez l'animation (Plus tard);
+      /* Dans le ngOnInit :
+      document.documentElement.addEventListener('click', ()=>this.fullScreen());
+      document.documentElement.click(); 
+      Ensuite je créer cette fonction FullScreen ;
+      fullScreen() {
+        let elem = document.documentElement;
+        let methodPourAnimation = elem.requestFullscreen;
+        if (methodPourAnimation) methodPourAnimation.call(elem);
+      }
+      */
     });
   }
 
