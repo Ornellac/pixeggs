@@ -5,6 +5,7 @@ import { AuthService } from '../auth.service';
 import { ApiService } from '../services/api.service';
 import { Utilisateur } from '../models/utilisateur';
 import { JsonPipe } from '@angular/common';
+import { Monstre } from '../models/monstre';
 
 @Component({
   selector: 'app-admin',
@@ -15,23 +16,25 @@ export class AdminComponent implements OnInit {
 
   public user?:Utilisateur;
   public userTest?:any;
+  public Monstre:Monstre[] = [];
 
   constructor(private _api:ApiService,private _routes: ActivatedRoute, private authService: AuthService, private router: Router) {
     
   }
 
   ngOnInit() {
-    // this._api.checkUser().subscribe(
-    //   (data) => this.user = data,
-    //   (err) => console.log(err)
-    // );
     this.userTest = localStorage.getItem('ACCESS_TOKEN');
     console.log(this.userTest)
     this.user = JSON.parse(this.userTest)
+    // this._api.getMonstre().subscribe(
+    //   (data) => this.Monstre = data );
   }
   
-  /*test*/
-
+  //!________________________________________________. Info du monstre :
+  // public monstre:string = '';
+  // AffichezMonstre(){
+  //   this._api.getMonstre
+  // }
 
   deconnecter(){
     this.authService.deconnecter();
