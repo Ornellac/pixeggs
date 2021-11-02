@@ -5,16 +5,15 @@
     </button>
 </p>
 
-<div>
+<div><!-- Ne fonctionne pas.. -->
     Info de mon monstre actuel:
-    <ng-container *ngIf="user">
-        <ng-container *ngFor="let user of Monstre">
             <p>
-                {{user?.NomMonstre}}
+                {{user?.PK_Utilisateur}}
+                {{Monstre|json}}
             </p>
-        </ng-container>
-    </ng-container>
 </div>
+
+
 
 <p>
     <button class="btn btn-blue" routerLink='/choix'>
