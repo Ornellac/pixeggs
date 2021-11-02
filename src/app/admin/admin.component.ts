@@ -25,8 +25,15 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
     this.userTest = localStorage.getItem('ACCESS_TOKEN');
     console.log(this.userTest)
-    this.user = JSON.parse(this.userTest)
-    
+    this.user = JSON.parse(this.userTest);
+    this._routes.params.subscribe(
+      params => this._api.getUserMonstre(parseInt(params.id)).subscribe(
+        (data) => {
+          this.Monstre = data
+          this._api.getUserMonstre(parseInt(params.id))
+        }
+      )
+    )
   }
   
 
