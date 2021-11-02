@@ -34,9 +34,8 @@ export class ApiService {
 
 
   // TEST :
-
-  public getUserMonstre(id:number): Observable<Monstre[]>{
-    return this._http.get<Monstre[]>(`${this._url}/monstre/${id}`);
+  public getUserMonstre(id:number): Observable<Monstre>{
+    return this._http.get<Monstre>(`${this._url}/monstre/${id}`);
   } 
 
   //* Les stats :

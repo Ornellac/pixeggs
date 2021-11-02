@@ -1,3 +1,4 @@
+import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { AuthGuard } from '../auth.guard';
 
@@ -8,10 +9,36 @@ import { AuthGuard } from '../auth.guard';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  public navItems:any[] = []
+
+  constructor(private _authService:AuthService) { }
 
   ngOnInit() {
+    this.navItems = this.initnavItems();
+    this._authService.userLog.subscribe(data => {
+      if (data) this.navItems.push(
+        {
+          url:'/admin',
+          name:'Profil'
+        }
+      )
+      else this.navItems = this.initnavItems();
+    })
   }
 
+  initnavItems(){
+    return [{
+      url:'/accueil',
+      name:'Accueil'},
+      {
+        url:'/connexion',
+        name:'Connection'
+      },
+      {
+        url:'/register',
+        name:'Créez un compte'
+      },
+    ]
+  }
 
 }

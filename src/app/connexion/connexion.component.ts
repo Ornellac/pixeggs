@@ -1,9 +1,10 @@
+import { Utilisateur } from './../models/utilisateur';
 import { AuthService } from './../auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Utilisateur } from '../models/utilisateur';
 import { ApiService } from '../services/api.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-connexion',
@@ -14,6 +15,7 @@ export class ConnexionComponent implements OnInit {
   
   loginForm!: FormGroup;
   isSubmitted = false;
+
 
   constructor(private _api:ApiService, private authService:AuthService, private router:Router, private formBuilder:FormBuilder ) { }
 
@@ -37,6 +39,7 @@ export class ConnexionComponent implements OnInit {
     this._api.checkLogin(this.loginForm.value).subscribe(data => {user=data;
       if (user.length > 0){
         this.authService.seConnecter(user[0]);
+
         this.router.navigateByUrl('/admin');
       }
     });

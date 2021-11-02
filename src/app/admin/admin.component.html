@@ -5,17 +5,26 @@
     </button>
 </p>
 
-<div><!-- Ne fonctionne pas.. -->
-    Info de mon monstre actuel:
-            <p>
-                {{user?.PK_Utilisateur}}
-                {{Monstre|json}}
+<div>
+    Info de mon monstre actuel:   
+            <p *ngIf="Monstre">
+                {{Monstre.NomMonstre}}
             </p>
 </div>
 
+<!-- <p>
+    <button class="btn btn-blue" routerLink='/'>
+        INVENTAIRE
+    </button>
+</p> -->
 
+<!-- <p>
+    <button class="btn btn-blue" routerLink='/'>
+        LANCER UN COMBAT
+    </button>
+</p> -->
 
-<p>
+<p *ngIf='!Monstre'>
     <button class="btn btn-blue" routerLink='/choix'>
         CREER UN MONSTRE
     </button>
