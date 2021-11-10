@@ -32,9 +32,6 @@ export class AdminComponent implements OnInit {
       this.Monstre = data})
   }
 
-  infoMonstre(){
-    
-  }
 
   deconnecter(){
     this.authService.deconnecter();
