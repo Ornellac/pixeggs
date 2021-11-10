@@ -11,34 +11,37 @@ export class NavComponent implements OnInit {
 
   public navItems:any[] = []
 
-  constructor(private _authService:AuthService) { }
+  constructor(private _authService:AuthService, private authGuard : AuthGuard) { }
 
   ngOnInit() {
-    this.navItems = this.initnavItems();
-    this._authService.userLog.subscribe(data => {
-      if (data) this.navItems.push(
-        {
-          url:'/admin',
-          name:'Profil'
-        }
-      )
-      else this.navItems = this.initnavItems();
-    })
+    //* Regardez pourquoi a la rénitialisation de la page le bouton disparait malgré l'user connecté?
+    // this.navItems = this.initnavItems();
+    // this._authService.userLog.subscribe(data => {
+    //   if (data) this.navItems.push(
+    //     {
+    //       url:'/admin',
+    //       name:'Profil'
+    //     }
+    //   )
+    //   else this.navItems = this.initnavItems();
+    // })
   }
 
-  initnavItems(){
-    return [{
-      url:'/accueil',
-      name:'Accueil'},
-      {
-        url:'/connexion',
-        name:'Connection'
-      },
-      {
-        url:'/register',
-        name:'Créez un compte'
-      },
-    ]
-  }
+  // initnavItems(){
+  //   return [
+  //     {
+  //     url:'/accueil',
+  //     name:'Accueil'
+  //     },
+  //     {
+  //       url:'/connexion',
+  //       name:'Connection'
+  //     },
+  //     {
+  //       url:'/register',
+  //       name:'Créez un compte'
+  //     },
+  //   ]
+  // }
 
 }

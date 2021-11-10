@@ -3,10 +3,16 @@
   <ul>
     <li>
       <div class="hot-container">
-        <p>
+        <!-- <p>
           <ng-container *ngFor="let navItem of navItems">
             <a [routerLink]='navItem.url' class="btn btn-blue"> {{navItem.name}} </a>
           </ng-container>
+        </p> -->
+        <p>
+          <a [routerLink]="'/accueil'" class="btn btn-blue">ACCUEIL</a>
+          <a [routerLink]="'/connexion'" class="btn btn-blue">CONNECTION</a>
+          <a [routerLink]="'/register'" class="btn btn-blue">CREER UN COMPTE</a>
+          <a [routerLink]="'/admin'" class="btn btn-blue">PROFIL</a>
         </p>
       </div>
     </li>

@@ -107,3 +107,71 @@ a{
 .login input[type="submit"]:focus {
     border-color: rgb(102, 103, 151);
 }
+
+//?________________________________________________________________________. Menu Nav ._____________________________________________________________//
+ul {
+    list-style: none;
+    font-family: 'Grandstander', cursive;
+    font-size: 30px;
+    justify-content: space-around;
+}
+
+nav {
+    text-align: center;
+}
+
+.hot-container p { margin-top: 10px; }
+a { text-decoration: none; margin: 0 10px; }
+
+.hot-container {
+	min-height: 100px;
+	margin-top: 100px;
+	width: 100%;
+	text-align: center;
+}
+
+a.btn {
+	display: inline-block;
+	color: #666;
+	background-color: #eee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 12px;
+	padding: 10px 30px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-bottom-width: 3px;
+}
+
+	a.btn:hover {
+		background-color: #e3e3e3;
+		border-color: rgba(0,0,0,0.5);
+	}
+	
+	a.btn:active {
+		background-color: #CCC;
+		border-color: rgba(0,0,0,0.9);
+	}
+
+/* button */
+
+a.btn.btn-blue {
+	background-color: rgb(226, 191, 255);
+	border-color: rgba(0,0,0,0.3);
+	text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+}
+
+	a.btn.btn-blue:hover {
+		background-color: rgb(142, 140, 176);
+		border-color: rgba(0,0,0,0.5);
+	}
+	
+	a.btn.btn-blue:active {
+		background-color: #3C677B;
+		border-color: rgba(0,0,0,0.9);
+	}
+//?____________________________________________________________________________________________________________________________. Fin
